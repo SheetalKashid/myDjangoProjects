@@ -1,0 +1,87 @@
+
+Steps to install django python web framework :
+
+
+Step 1) Check whether Python package Index(pip) is installed in ur system, check its version by following command: 
+	pip3 --version
+
+Step 2) If Python package Index(pip) is not installed in ur system, type following command: 
+	sudo apt-get install -y python3-pip
+
+Step 3) After successful installation, check its version by following command: 
+	pip3 --version
+
+Step 4) Install virtual environment by following command: 
+ 	pip3 install virtualenv
+  	
+Step 5) Check the version of virtual environment by following command: 
+	virtualenv --version
+
+Step 6) Create a directory named "django-apps" by following command: 
+	mkdir django-apps
+
+Step 7) Move inside the created directory "django-apps" by following command: 
+	cd django-apps
+
+Step 8) List out all the directories and files by following command: 
+	ls
+
+Step 9) Inside django-apps directory, create your virtual environment named "djangoenv" by following command: 
+	virtualenv djangoenv
+
+Step 10) List out all the directories and files within the created virtual environment by following command: 
+	ls
+
+Step 11) Activate the created virtual environment "djangoenv" by following command: 
+	source ./bin/activate
+
+Step 12) To check whether your virtual environment is activated or not, its prefix will be changed by your virtual environment name "djangoenv", So it looks like:
+	(djangoenv) $   
+
+Step 13) Move inside the created virtual environment by following command:
+	cd djangoenv
+
+Step 14) List out all the directories and files present in virtual environment by following command:
+	ls
+
+Step 15) Within virtual environment, Install django by using following command: 
+	pip install django
+
+Step 16) Check the version of django by using following command: 
+	django-admin --version
+
+Step 17) To open the port which we are using in our server's firewall,type following command: 
+	sudo ufw allow 8000
+
+Step 18) Within "django-apps" directory, create a  sample django project named "djangodemo" by using following command: 
+	django-admin startproject djangodemo
+
+Step 19) Move Within sample django project named "djangodemo" to check what project files include by using following command:
+	cd djangodemo
+
+Step 20) Within sample django project named "djangodemo" List out all the directories by using following command:
+	ls
+	This following command displays the two project files: manage.py and one folder named djangodemo.
+
+Step 21) To view the manage.py script file  type following command:	
+	less manage.py
+
+Step 22) To navigate inside djangodemo project, type following command:
+    	cd djangodemo/
+
+Step 23) Displays the project files and folders using following command:
+    	ls
+	This following command displays the four project files: __init__.py, urls.py, settings.py and wsgi.py.
+
+Step 24) To edit settings.py file, to add our server's ip address to the list of ALLOWED_HOSTS in settings.py, type following command:
+    	nano ~/django-apps/djangoenv/djangodemo/djangodemo/settings.py
+
+Step 25) To navigate back to manage.py directory, type following command:
+    	cd ~/django-apps/djangoenv/djangodemo
+
+Step 26) List out the directory inside manage.py type following command:
+    	ls
+
+Step 27) To Start the server type following command:
+    	python manage.py runserver 10.0.2.15:8000
+But 10.0.2.15:8000 is mine server ip address.
